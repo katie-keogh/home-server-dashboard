@@ -1,9 +1,7 @@
 services:
   dashboard:
-    image: nginx:alpine
+    build: .
     container_name: news-dashboard
     ports:
       - "8080:80"
-    volumes:
-      - ./index.html:/usr/share/nginx/html/index.html:ro
     restart: unless-stopped
